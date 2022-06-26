@@ -3,15 +3,8 @@
  * @return {number}
  */
 var findCenter = function(edges) {
-    let fqCounter = {}
-    for(let edge of edges){
-        for(let i = 0; i < edge.length; i++){
-            let node = edge[i];
-            fqCounter[node] = (fqCounter[node] || 0) + 1
-        }
-    }
-    for(let key in fqCounter){
-        if(fqCounter[key] > 1) return key
-    }
-    console.log(fqCounter)
+  const [[a, b], [c, d]] = edges;
+    console.log([[a, b], [c, d]])
+    return a === c || b === c ? c : d
 };
+
